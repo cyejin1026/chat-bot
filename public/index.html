@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fa">
+  <title>AI 챗봇</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main class="chat-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">✳</div>
+        <div><h1>AI 챗봇</h1><p><span class="status-dot"></span> gpt-4o-mini</p></div>
+      </div>
+      <button id="new-chat" class="new-chat" type="button" title="새 대화 시작">＋ <span>새 대화</span></button>
+    </header>
+
+    <section id="messages" class="messages" aria-label="대화 내용" aria-live="polite">
+      <div id="welcome" class="welcome">
+        <div class="welcome-icon" aria-hidden="true">✳</div>
+        <h2>무엇이든 물어보세요</h2>
+        <p>이전 대화의 문맥을 기억해 이어서 답변해요.</p>
+        <div class="suggestions">
+          <button type="button" data-prompt="오늘 할 일을 우선순위로 정리하는 방법을 알려줘">할 일 정리하는 방법</button>
+          <button type="button" data-prompt="처음 배우는 사람도 이해할 수 있게 인공지능을 설명해줘">인공지능 쉽게 설명하기</button>
+          <button type="button" data-prompt="집에 있는 재료로 간단한 저녁 메뉴를 추천해줘">저녁 메뉴 추천받기</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="composer-wrap">
+      <form id="chat-form" class="composer">
+        <textarea id="message-input" rows="1" maxlength="4000" placeholder="메시지를 입력하세요" aria-label="메시지 입력"></textarea>
+        <button id="send-button" class="send-button" type="submit" aria-label="메시지 보내기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5m-7 7 7-7 7 7"/></svg></button>
+      </form>
+      <p class="disclaimer">AI가 생성한 답변은 부정확할 수 있습니다. 민감한 정보는 입력하지 마세요.</p>
+    </footer>
+  </main>
+</body>
+</html>
